@@ -16,7 +16,9 @@ const favoriteSong = prompt('What\s your favorite song?');
 alert('I can picture you now, ' + userName + ' from ' + userHome + '. Dancing to ' + favoriteSong + ' while eating ' + favoriteFood + '.');
 console.log(userName + '\'s favorite song is ' + favoriteSong + '.');*/
 
-const hateCats = prompt('Enough about you, ' + userName + '. I\'m guessing you\'d like to know everything about me! First things first. Do you think I hate cats?').toLowerCase();
+const nickname = userName.charAt(0);
+
+const hateCats = prompt('Enough about you, ' + nickname + '. (You don\'t mind if I call you ' + nickname + ', do you?) I\'m guessing you\'d like to know everything about me! First things first. Do you think I hate cats?').toLowerCase();
 if (hateCats === 'yes' || hateCats === 'y') {
     alert('Silly ' + userName + '. No one could hate cats.');
 } else if (hateCats === 'no' || hateCats === 'n') {
