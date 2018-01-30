@@ -28,7 +28,7 @@ if (hateCats === 'yes' || hateCats === 'y') {
 } else {
     alert('You can answer Yes or No (or yes or no or YeS or nO or even y or n, but you can\'t answer ' + hateCats + '! Let\'s try another one.');
 }
-console.log('When asked if I like cats, the user answered "' + hateCats + '".');
+console.log('When asked if I hate cats, the user answered "' + hateCats + '".');
 
 /* Enough about you, userName. I'm guessing you'd like to know everything about me!
 First things first. Do you think I hate cats?
