@@ -18,7 +18,7 @@ alert('I can picture you now, ' + userName + ' from ' + userHome + '. Dancing to
 console.log(userName + '\'s favorite song is ' + favoriteSong + '.');*/
 
 // Day 2
-const nickname = userName.charAt(0);
+const nickname = userName.charAt();
 
 const hateCats = prompt('Enough about you, ' + nickname + '. (You don\'t mind if I call you ' + nickname + ', do you?) I\'m guessing you\'d like to know everything about me! First things first. Do you think I hate cats?').toLowerCase();
 if (hateCats === 'yes' || hateCats === 'y') {
