@@ -30,6 +30,16 @@ if (hateCats === 'yes' || hateCats === 'y') {
 }
 console.log('When asked if I hate cats, the user answered "' + hateCats + '".');
 
+const rideBike = prompt('How about this: Do I ride my bike to school?').toLowerCase();
+if (rideBike === 'yes' || rideBike === 'y') {
+    alert('Nope! I\'m actually a little scared of bikes.');
+} else if (rideBike === 'no' || rideBike === 'n') {
+    alert('Correct! I actually walk, even though I live 3 miles away.');
+} else {
+    alert('You can answer Yes or No (or yes or no or YeS or nO or even y or n, but you can\'t answer ' + rideBike + '! Let\'s try another one.');
+}
+console.log('When asked if I ride my bike to school, the user answered "' + rideBike + '".');
+
 /* Enough about you, userName. I'm guessing you'd like to know everything about me!
 First things first. Do you think I hate cats?
 Y: Silly userName. No one could hate cats.
