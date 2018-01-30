@@ -1,5 +1,6 @@
 'use strict';
 
+// Day 1
 const userName = prompt('Hello! What\'s your name?');
 alert('Hi, ' + userName + '! I hope you don\'t mind if I ask you a few more questions.');
 console.log('The user\'s name is ' + userName + '.');
@@ -16,6 +17,7 @@ const favoriteSong = prompt('What\s your favorite song?');
 alert('I can picture you now, ' + userName + ' from ' + userHome + '. Dancing to ' + favoriteSong + ' while eating ' + favoriteFood + '.');
 console.log(userName + '\'s favorite song is ' + favoriteSong + '.');*/
 
+// Day 2
 const nickname = userName.charAt(0);
 
 const hateCats = prompt('Enough about you, ' + nickname + '. (You don\'t mind if I call you ' + nickname + ', do you?) I\'m guessing you\'d like to know everything about me! First things first. Do you think I hate cats?').toLowerCase();
@@ -26,9 +28,9 @@ if (hateCats === 'yes' || hateCats === 'y') {
 } else {
     alert('You can answer Yes or No (or yes or no or YeS or nO or even y or n, but you can\'t answer ' + hateCats + '! Let\'s try another one.');
 }
-console.log('When asked if I like cats, the user answered ' + hateCats)
+console.log('When asked if I like cats, the user answered "' + hateCats + '".');
 
-/* Enough about you, userName. I'm guessing you'd like to know everything about me! 
+/* Enough about you, userName. I'm guessing you'd like to know everything about me!
 First things first. Do you think I hate cats?
 Y: Silly userName. No one could hate cats.
 N: You know me so well already. Of course I don't!
