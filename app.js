@@ -9,6 +9,12 @@ alert('Hi there! My name is Keli, and I\'m an aspiring web developer. Want to kn
 const userName = prompt('First of all, what\'s your name?');
 alert('Hi, ' + userName + '! Thanks so much for visiting. So here\'s an idea: I\'ll ask some questions on the subject of me, and you can guess the answers. All you have to do is type "Yes" or "No" ("y" or "n" if you\'re efficient that way).');
 
+// total number of questions
+let howManyQuestions = 5;
+
+// yes or no score
+let score = 0;
+
 // initial 5 questions
 let hateCats = prompt('Okay, first question. What do you think: Do I hate cats?').toLowerCase();
 while (hateCats !== 'yes' && hateCats !== 'y' && hateCats !== 'no' && hateCats !== 'n') {
@@ -19,6 +25,7 @@ if (hateCats === 'yes' || hateCats === 'y') {
     userStatus = 'incorrect';
 } else if (hateCats === 'no' || hateCats === 'n') {
     alert('You know me so well already. Of course I don\'t!');
+    score++;
     userStatus = 'correct';
 }
 console.log('When asked if I hate cats, ' + userName + ' answered "' + hateCats + '."');
@@ -33,6 +40,7 @@ if (rideBike === 'yes' || rideBike === 'y') {
     userStatus = 'incorrect';
 } else if (rideBike === 'no' || rideBike === 'n') {
     alert('Correct! I actually walk, even though I live 3 miles away.');
+    score++;
     userStatus = 'correct';
 }
 console.log('When asked if I ride my bike to school, ' + userName + ' answered "' + rideBike + '."');
@@ -44,6 +52,7 @@ while (lovesPacific !== 'yes' && lovesPacific !== 'y' && lovesPacific !== 'no' &
 }
 if (lovesPacific === 'yes' || lovesPacific === 'y') {
     alert('I do. I really do.');
+    score++;
     userStatus = 'correct';
 } else if (lovesPacific === 'no' || lovesPacific === 'n') {
     alert('But ' + userName + ', the crashing waves! The craggy coves! The dramatic light!');
@@ -61,6 +70,7 @@ if (unmovedByGloria === 'yes' || unmovedByGloria === 'y') {
     userStatus = 'incorrect';
 } else if (unmovedByGloria === 'no' || unmovedByGloria === 'n') {
     alert('It\'s true, I can\'t. Not even close.');
+    score++;
     userStatus = 'correct';
 }
 console.log('When asked if I can sit still when I hear Gloria by Laura Branigan, ' + userName + ' answered "' + unmovedByGloria + '."');
@@ -75,7 +85,19 @@ if (loveSweaters === 'yes' || loveSweaters === 'y') {
     userStatus = 'incorrect';
 } else if (loveSweaters === 'no' || loveSweaters === 'n') {
     alert('Clever ' + userName + '. I\'ve never even finished a sweater!');
+    score++;
     userStatus = 'correct';
 }
 console.log('When asked if sweaters are my favorite thing to knit, ' + userName + ' answered "' + loveSweaters + '."');
 console.log(userName + ' is ' + userStatus + '.');
+
+// score report
+let response;
+if (score === howManyQuestions) {
+    response = 'You really get me!';
+} else if (score < howManyQuestions && score >= howManyQuestions / 2) {
+    response = 'Well done, but I think you should get to know me better.';
+} else {
+    response = 'Clearly you have much more to learn about me!';
+}
+alert('You got ' + score + ' out of 5 questions right, ' + userName + '. ' + response);
