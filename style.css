@@ -1,3 +1,33 @@
 body {
     background-color: cadetblue;
 }
+
+p {
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    float: left;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+#name {
+    margin: 20px 10px 20px 30px;
+    padding: 50px;
+}
+
+#from {
+    margin: 50px 20px 10px 30px;
+    padding: 50px;
+}
+
+#food {
+    margin: 30px 20px 10px 10px;
+    padding: 50px;
+}
+
+#song {
+    margin: 40px 20px 10px 20px;
+    padding: 50px;
+}
