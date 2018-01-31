@@ -20,25 +20,35 @@ console.log(userName + '\'s favorite song is ' + favoriteSong + '.');*/
 // Day 2
 const nickname = userName.charAt();
 
+let userStatus;
+
 const hateCats = prompt('Enough about you, ' + nickname + '. (You don\'t mind if I call you ' + nickname + ', do you?) I\'m guessing you\'d like to know everything about me! First things first. Do you think I hate cats?').toLowerCase();
 if (hateCats === 'yes' || hateCats === 'y') {
     alert('Silly ' + userName + '. No one could hate cats.');
+    userStatus = 'incorrect';
 } else if (hateCats === 'no' || hateCats === 'n') {
     alert('You know me so well already. Of course I don\'t!');
+    userStatus = 'correct';
 } else {
     alert('You can answer Yes or No (or yes or no or YeS or nO or even y or n, but you can\'t answer ' + hateCats + '! Let\'s try another one.');
+    userStatus = 'not playing by the rules';
 }
-console.log('When asked if I hate cats, the user answered "' + hateCats + '".');
+console.log('When asked if I hate cats, ' + userName + ' answered "' + hateCats + '."');
+console.log(userName + ' is ' + userStatus + '.');
 
 const rideBike = prompt('How about this: Do I ride my bike to school?').toLowerCase();
 if (rideBike === 'yes' || rideBike === 'y') {
     alert('Nope! I\'m actually a little scared of bikes.');
+    userStatus = 'incorrect';
 } else if (rideBike === 'no' || rideBike === 'n') {
     alert('Correct! I actually walk, even though I live 3 miles away.');
+    userStatus = 'correct';
 } else {
     alert('You can answer Yes or No (or yes or no or YeS or nO or even y or n, but you can\'t answer ' + rideBike + '! Let\'s try another one.');
+    userStatus = 'not playing by the rules';
 }
-console.log('When asked if I ride my bike to school, the user answered "' + rideBike + '".');
+console.log('When asked if I ride my bike to school, ' + userName + ' answered "' + rideBike + '."');
+console.log(userName + ' is ' + userStatus + '.');
 
 /* Enough about you, userName. I'm guessing you'd like to know everything about me!
 First things first. Do you think I hate cats?
