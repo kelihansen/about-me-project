@@ -1,93 +1,81 @@
 'use strict';
 
-// Day 1
-const userName = prompt('Hello! What\'s your name?');
-alert('Hi, ' + userName + '! I hope you don\'t mind if I ask you a few more questions.');
-console.log('The user\'s name is ' + userName + '.');
-
-const userHome = prompt('Where are you from?');
-alert('How nice, ' + userName + '. I hear ' + userHome + ' is beautiful this time of year.');
-console.log(userName + ' is from ' + userHome + '.');
-
-const favoriteFood = prompt('What\'s your favorite food?');
-alert('Of course, ' + userName + '! The world-renowned ' + favoriteFood + ' of ' + userHome + '.');
-console.log(userName + '\'s favorite food is ' + favoriteFood + '.');
-
-const favoriteSong = prompt('What\s your favorite song?');
-alert('I can picture you now, ' + userName + ' from ' + userHome + '. Dancing to ' + favoriteSong + ' while eating ' + favoriteFood + '.');
-console.log(userName + '\'s favorite song is ' + favoriteSong + '.');
-
-// Day 2
-const nickname = userName.charAt();
-
+// used to store whether user was correct or not
 let userStatus;
 
-const hateCats = prompt('Enough about you, ' + nickname + '. (You don\'t mind if I call you ' + nickname + ', do you?) I\'m guessing you\'d like to know everything about me! First things first. Do you think I hate cats?').toLowerCase();
+// intro & name collection
+alert('Hi there! My name is Keli, and I\'m an aspiring web developer. Want to know more about me?');
+
+const userName = prompt('First of all, what\'s your name?');
+alert('Hi, ' + userName + '! Thanks so much for visiting. So here\'s an idea: I\'ll ask some questions on the subject of me, and you can guess the answers. All you have to do is type "Yes" or "No" ("y" or "n" if you\'re efficient that way).');
+
+// initial 5 questions
+let hateCats = prompt('Okay, first question. What do you think: Do I hate cats?').toLowerCase();
+while (hateCats !== 'yes' && hateCats !== 'y' && hateCats !== 'no' && hateCats !== 'n') {
+    hateCats = prompt('I think you forgot how to play, Erik. Try again: Do I hate cats?').toLowerCase();
+}
 if (hateCats === 'yes' || hateCats === 'y') {
     alert('Silly ' + userName + '. No one could hate cats.');
     userStatus = 'incorrect';
 } else if (hateCats === 'no' || hateCats === 'n') {
     alert('You know me so well already. Of course I don\'t!');
     userStatus = 'correct';
-} else {
-    alert('You can answer Yes or No (or yes or no or YeS or nO or even y or n, but you can\'t answer ' + hateCats + '! Let\'s try another one.');
-    userStatus = 'not playing by the rules';
 }
 console.log('When asked if I hate cats, ' + userName + ' answered "' + hateCats + '."');
 console.log(userName + ' is ' + userStatus + '.');
 
-const rideBike = prompt('How about this: Do I ride my bike to school?').toLowerCase();
+let rideBike = prompt('How about this: Do I ride my bike to school?').toLowerCase();
+while (rideBike !== 'yes' && rideBike !== 'y' && rideBike !== 'no' && rideBike !== 'n') {
+    rideBike = prompt('Yes or no, please! Try again: Do I ride my bike to school?').toLowerCase();
+}
 if (rideBike === 'yes' || rideBike === 'y') {
     alert('Nope! I\'m actually a little scared of bikes.');
     userStatus = 'incorrect';
 } else if (rideBike === 'no' || rideBike === 'n') {
     alert('Correct! I actually walk, even though I live 3 miles away.');
     userStatus = 'correct';
-} else {
-    alert('You can answer Yes or No (or yes or no or YeS or nO or even y or n, but you can\'t answer ' + rideBike + '! Let\'s try another one.');
-    userStatus = 'not playing by the rules';
 }
 console.log('When asked if I ride my bike to school, ' + userName + ' answered "' + rideBike + '."');
 console.log(userName + ' is ' + userStatus + '.');
 
-const lovesPacific = prompt('All right, ' + userName + '. Do I think cold, rocky, Pacific beaches are some of the prettiest places on earth?').toLowerCase();
+let lovesPacific = prompt('All right, ' + userName + '. Do I think cold, rocky, Pacific beaches are some of the prettiest places on earth?').toLowerCase();
+while (lovesPacific !== 'yes' && lovesPacific !== 'y' && lovesPacific !== 'no' && lovesPacific !== 'n') {
+    lovesPacific = prompt('That\'s not a valid answer, ' + userName + '. You can do this. Do I think cold, rocky, Pacific beaches are some of the prettiest places on earth?');
+}
 if (lovesPacific === 'yes' || lovesPacific === 'y') {
     alert('I do. I really do.');
     userStatus = 'correct';
 } else if (lovesPacific === 'no' || lovesPacific === 'n') {
     alert('But ' + userName + ', the crashing waves! The craggy coves! The dramatic light!');
     userStatus = 'incorrect';
-} else {
-    alert('You can answer Yes or No (or yes or no or YeS or nO or even y or n, but you can\'t answer ' + lovesPacific + '! Let\'s try another one.');
-    userStatus = 'not playing by the rules';
 }
 console.log('When asked if I think cold, rocky, Pacific beaches are some of the prettiest places on earth, ' + userName + ' answered "' + lovesPacific + '."');
 console.log(userName + ' is ' + userStatus + '.');
 
-const unmovedByGloria = prompt('What do you think: Can I sit still when I hear Gloria by Laura Branigan?').toLowerCase();
+let unmovedByGloria = prompt('What do you think: Can I sit still when I hear Gloria by Laura Branigan?').toLowerCase();
+while (unmovedByGloria !== 'yes' && unmovedByGloria !== 'y' && unmovedByGloria !== 'no' && unmovedByGloria !== 'n') {
+    unmovedByGloria = prompt('Yes, I can or no, I can\'t! Try one more time: Can I sit still when I hear Gloria by Laura Branigan?');
+}
 if (unmovedByGloria === 'yes' || unmovedByGloria === 'y') {
     alert('Oh ' + userName + '. I thought you understood me.');
     userStatus = 'incorrect';
 } else if (unmovedByGloria === 'no' || unmovedByGloria === 'n') {
     alert('It\'s true, I can\'t. Not even close.');
     userStatus = 'correct';
-} else {
-    alert('You can answer Yes or No (or yes or no or YeS or nO or even y or n, but you can\'t answer ' + unmovedByGloria + '! Let\'s try another one.');
-    userStatus = 'not playing by the rules';
 }
 console.log('When asked if I can sit still when I hear Gloria by Laura Branigan, ' + userName + ' answered "' + unmovedByGloria + '."');
 console.log(userName + ' is ' + userStatus + '.');
 
-const loveSweaters = prompt('Okay ' + userName + '. Last question. Are sweaters my favorite thing to knit?').toLowerCase();
+let loveSweaters = prompt('Okay, ' + userName + '. Last question. Are sweaters my favorite thing to knit?').toLowerCase();
+while (loveSweaters !== 'yes' && loveSweaters !== 'y' && loveSweaters !== 'no' && loveSweaters !== 'n') {
+    loveSweaters = prompt('Just one more yes or no and we can move on! Give it another go: Are sweaters my favorite thing to knit?');
+}
 if (loveSweaters === 'yes' || loveSweaters === 'y') {
     alert('Good guess, but I actually prefer hats.');
     userStatus = 'incorrect';
 } else if (loveSweaters === 'no' || loveSweaters === 'n') {
     alert('Clever ' + userName + '. I\'ve never even finished a sweater!');
     userStatus = 'correct';
-} else {
-    alert('You can answer Yes or No (or yes or no or YeS or nO or even y or n, but you can\'t answer ' + loveSweaters + '! Let\'s try another one.');
-    userStatus = 'not playing by the rules';
 }
 console.log('When asked if sweaters are my favorite thing to knit, ' + userName + ' answered "' + loveSweaters + '."');
 console.log(userName + ' is ' + userStatus + '.');
