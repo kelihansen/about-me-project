@@ -18,7 +18,7 @@ let score = 0;
 // INITIAL 5 QUESTIONS, now with looping!
 let hateCats = prompt('Okay, first question. What do you think: Do I hate cats?').toLowerCase();
 while (hateCats !== 'yes' && hateCats !== 'y' && hateCats !== 'no' && hateCats !== 'n') {
-    hateCats = prompt('I think you forgot how to play, Erik. Try again: Do I hate cats?').toLowerCase();
+    hateCats = prompt('I think you forgot how to play, ' + userName + '. Try again: Do I hate cats?').toLowerCase();
 }
 if (hateCats === 'yes' || hateCats === 'y') {
     alert('Silly ' + userName + '. No one could hate cats.');
@@ -139,7 +139,7 @@ if (parseInt(numGuess) === favNum) {
 
 // STATE GUESSING
 // so first is my array of states
-const otherStates = ['California', 'Pennsylvania', 'New York', 'Mississippi', 'Florida', 'Hawaii'];
+const otherStates = ['California', 'Pennsylvania', 'New York'];
 // to make them lowercase, I looped through them and "toLowerCased" each string, leaving the results in a new array
 const simpleStates = [];
 for (let i = 0; i < otherStates.length; i++) {
@@ -152,7 +152,7 @@ guessesGrammar = 'guesses';
 // I made a variable to act like a switch that gets flipped if they get the right answer
 let winner;
 // finally we have the initial prompt, which returns a lowercase version of the user's answer
-let stateGuess = prompt('I\'ve got one last game for you, ' + userName + '. Enter the name of a state other than Oregon, and I\'ll tell you if I\'ve lived there.').toLowerCase();
+let stateGuess = prompt('I\'ve got one last game for you, ' + userName + '. Enter the name of a state other than Oregon. If I\'ve lived there, you win!').toLowerCase();
 // the intial prompt takes guess number one, so this loop gives 5 more
 for (let i = 0; i < 5; i++) {
     // the "includes" method checks if the user's answer matches any of the (lowercase) answers
@@ -184,7 +184,7 @@ stateFormatted.push(' and ' + otherStates[otherStates.length - 1]);
 
 // if the winner switch was flipped by a correct answer, the user gets congratulated and informed (if not, consoled and informed)
 if (winner) {
-    alert('It\'s true, ' + userName + '! Apart from Oregon, I\'ve lived in ' + stateFormatted + '. (Actually, only the first 3 are true - the rest just test my code!)');
+    alert('You did it, ' + userName + '! Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
 } else if (stateGuess !== 17) {
-    alert('Sorry, ' + userName + ', you\'re out of guesses. Apart from Oregon, I\'ve lived in ' + stateFormatted + '. (Actually, only the first 3 are true - the rest just test my code!)');
+    alert('Sorry, ' + userName + ', you\'re out of guesses. Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
 }
