@@ -180,7 +180,7 @@ for (let i = 1; i < (otherStates.length - 1); i++) {
 // then you add the final element of the array, preceded by "and"
 stateFormatted.push(' and ' + otherStates[otherStates.length - 1]);
 
-// if the winner switch was flipped by a correct answer, the user gets congratulated and informed (if not, consoled and informed)
+// if user won with last guess, the user gets congratulated and informed (if not, consoled and informed)
 if (simpleStates.includes(stateGuess)) {
     alert('You did it, ' + userName + '! Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
 } else {
