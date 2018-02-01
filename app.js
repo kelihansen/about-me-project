@@ -6,7 +6,7 @@ let userStatus;
 // INTRO & NAME COLLECTION
 alert('Hi there! My name is Keli, and I\'m an aspiring web developer. Want to know more about me?');
 
-const userName = prompt('First of all, what\'s your name?');
+const userName = prompt('Oh good! First of all, what\'s your name?');
 alert('Hi, ' + userName + '! So here\'s an idea: I\'ll ask some questions on the subject of yours truly, and you can guess the answers. All you have to do is type "Yes" or "No" ("y" or "n" if you\'re efficient that way).');
 
 // total number of questions
