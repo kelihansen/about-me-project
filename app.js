@@ -153,7 +153,7 @@ guessesGrammar = 'guesses';
 let winner;
 // finally we have the initial prompt, which returns a lowercase version of the user's answer
 let stateGuess = prompt('I\'ve got one last game for you, ' + userName + '. Enter the name of a state other than Oregon. If I\'ve lived there, you win!').toLowerCase();
-// the intial prompt takes guess number one, so this loop gives 5 more
+// the initial prompt takes guess number one, so this loop gives 5 more
 for (let i = 0; i < 5; i++) {
     // the "includes" method checks if the user's answer matches any of the (lowercase) answers
     if (simpleStates.includes(stateGuess)) {
@@ -185,6 +185,6 @@ stateFormatted.push(' and ' + otherStates[otherStates.length - 1]);
 // if the winner switch was flipped by a correct answer, the user gets congratulated and informed (if not, consoled and informed)
 if (winner) {
     alert('You did it, ' + userName + '! Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
-} else if (stateGuess !== 17) {
+} else {
     alert('Sorry, ' + userName + ', you\'re out of guesses. Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
 }
