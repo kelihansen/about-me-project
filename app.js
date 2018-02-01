@@ -1,23 +1,30 @@
 'use strict';
-
-// I'll use this to store whether user was correct or not
+let score = 0;
+const howManyQuestions = 5;
 let userStatus;
+let guessesLeft = 3;
+let guessesGrammar = 'guesses';
+
+const userName = getUserName();
+catQuestion();
+bikeQuestion();
+beachQuestion();
+gloriaQuestion();
+sweatersQuestion();
+reportScore();
+numberQuestion();
+statesQuestion();
+
 
 // INTRO & NAME COLLECTION
-alert('Hi there! My name is Keli, and I\'m an aspiring web developer. Want to know more about me?');
+
 
 function getUserName() {
+    alert('Hi there! My name is Keli, and I\'m an aspiring web developer. Want to know more about me?');
     const theirName = prompt('Oh good! First of all, what\'s your name?');
     alert('Hi, ' + theirName + '! So here\'s an idea: I\'ll ask some questions on the subject of yours truly, and you can guess the answers. All you have to do is type "Yes" or "No" ("y" or "n" if you\'re efficient that way).');
     return theirName;
 }
-const userName = getUserName();
-
-// total number of questions
-const howManyQuestions = 5;
-
-// "yes or no" game score
-let score = 0;
 
 // INITIAL 5 QUESTIONS, now with looping!
 function catQuestion() {
@@ -36,8 +43,6 @@ function catQuestion() {
     console.log('When asked if I hate cats, ' + userName + ' answered "' + hateCats + '."');
     console.log(userName + ' is ' + userStatus + '.');
 }
-catQuestion();
-
 function bikeQuestion() {
     let rideBike = prompt('How about this: Do I ride my bike to school?').toLowerCase();
     while (rideBike !== 'yes' && rideBike !== 'y' && rideBike !== 'no' && rideBike !== 'n') {
@@ -54,8 +59,6 @@ function bikeQuestion() {
     console.log('When asked if I ride my bike to school, ' + userName + ' answered "' + rideBike + '."');
     console.log(userName + ' is ' + userStatus + '.');
 }
-bikeQuestion();
-
 function beachQuestion() {
     let lovesPacific = prompt('All right, ' + userName + '. Do I think cold, rocky, Pacific beaches are some of the prettiest places on earth?').toLowerCase();
     while (lovesPacific !== 'yes' && lovesPacific !== 'y' && lovesPacific !== 'no' && lovesPacific !== 'n') {
@@ -72,8 +75,6 @@ function beachQuestion() {
     console.log('When asked if I think cold, rocky, Pacific beaches are some of the prettiest places on earth, ' + userName + ' answered "' + lovesPacific + '."');
     console.log(userName + ' is ' + userStatus + '.');
 }
-beachQuestion();
-
 function gloriaQuestion() {
     let unmovedByGloria = prompt('What do you think: Can I sit still when I hear Gloria by Laura Branigan?').toLowerCase();
     while (unmovedByGloria !== 'yes' && unmovedByGloria !== 'y' && unmovedByGloria !== 'no' && unmovedByGloria !== 'n') {
@@ -90,8 +91,6 @@ function gloriaQuestion() {
     console.log('When asked if I can sit still when I hear Gloria by Laura Branigan, ' + userName + ' answered "' + unmovedByGloria + '."');
     console.log(userName + ' is ' + userStatus + '.');
 }
-gloriaQuestion();
-
 function sweatersQuestion() {
     let loveSweaters = prompt('Okay, ' + userName + '. Last question. Are sweaters my favorite thing to knit?').toLowerCase();
     while (loveSweaters !== 'yes' && loveSweaters !== 'y' && loveSweaters !== 'no' && loveSweaters !== 'n') {
@@ -108,9 +107,7 @@ function sweatersQuestion() {
     console.log('When asked if sweaters are my favorite thing to knit, ' + userName + ' answered "' + loveSweaters + '."');
     console.log(userName + ' is ' + userStatus + '.');
 }
-sweatersQuestion();
 // SCORE REPORT
-
 function reportScore() {
     let response;
     if (score === howManyQuestions) {
@@ -123,12 +120,9 @@ function reportScore() {
     }
     alert('You got ' + score + ' out of 5 questions right, ' + userName + '. ' + response);
 }
-reportScore();
 // NUMBER GUESSING
-// first I establish my favorite number
-let guessesLeft = 3;
-// it hurt me to read "you have 1 guesses left," so this sets up a fix
-let guessesGrammar = 'guesses';
+
+
 function numberQuestion() {
     const favNum = 17;
     // I set the initial value of how many guesses the user has left
@@ -151,7 +145,6 @@ function numberQuestion() {
             guessesGrammar = 'guess';
         }
     }
-
     // I initally had the congratulatory alert inside the loop, but they didn't get a response if they got it right on the last guess!
     if (parseInt(numGuess) === favNum) {
         alert(favNum + ' it is! Well done.');
@@ -159,7 +152,6 @@ function numberQuestion() {
         alert('Sorry, ' + userName + ', you\'re out of guesses. My favorite number is 17.');
     }
 }
-numberQuestion();
 // STATE GUESSING
 function statesQuestion() {
 // so first is my array of states
@@ -179,7 +171,7 @@ function statesQuestion() {
     for (let i = 0; i < 5; i++) {
         // the "includes" method checks if the user's answer matches any of the (lowercase) answers
         if (simpleStates.includes(stateGuess)) {
-            alert('You did it, ' + userName + '! Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
+            // alert('You did it, ' + userName + '! Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
             break;
         // if so, we exit the loop, if not, the user is prompted again, with an updated guess count
         } else {
@@ -192,7 +184,6 @@ function statesQuestion() {
             guessesGrammar = 'guess';
         }
     }
-
     // I'm pretty sure there's a better way to do this, but a list of elements separated by nothing by commas (no spaces) makes me cringe
     const stateFormatted = [];
     // after starting with an empty array (which I learned can be a const, because even though it changes, it isn't reassigned) my first state gets added
@@ -211,4 +202,3 @@ function statesQuestion() {
         alert('Sorry, ' + userName + ', you\'re out of guesses. Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
     }
 }
-statesQuestion();
