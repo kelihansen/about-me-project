@@ -175,7 +175,7 @@ for (let i = 0; i < 5; i++) {
 const stateFormatted = [];
 // after starting with an empty array (which I learned can be a const, because even though it changes, it isn't reassigned) my first state gets added
 stateFormatted.push(otherStates[0]);
-// then you cycle through the rest of the array and add spaces, stopping before the last element
+// then you cycle through the rest of the array and add spaces, stopping before the last element (much cooler if you add more states to the original array)
 for (let i = 1; i < (otherStates.length - 1); i++) {
     stateFormatted.push(' ' + otherStates[i]);
 }
