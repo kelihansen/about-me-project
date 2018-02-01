@@ -157,7 +157,7 @@ let stateGuess = prompt('I\'ve got one last game for you, ' + userName + '. Ente
 for (let i = 0; i < 5; i++) {
     // the "includes" method checks if the user's answer matches any of the (lowercase) answers
     if (simpleStates.includes(stateGuess)) {
-        winner = true;
+        alert('You did it, ' + userName + '! Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
         break;
     // if so, we exit the loop, if not, the user is prompted again, with an updated guess count
     } else {
@@ -183,7 +183,7 @@ for (let i = 1; i < (otherStates.length - 1); i++) {
 stateFormatted.push(' and ' + otherStates[otherStates.length - 1]);
 
 // if the winner switch was flipped by a correct answer, the user gets congratulated and informed (if not, consoled and informed)
-if (winner) {
+if (simpleStates.includes(stateGuess)) {
     alert('You did it, ' + userName + '! Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
 } else {
     alert('Sorry, ' + userName + ', you\'re out of guesses. Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
