@@ -1,33 +1,90 @@
 body {
     background-color: cadetblue;
+    font-family: monospace;
 }
 
-p {
+#wrapper {
+    width: 910px;
+    margin: 0 auto;
+}
+
+header p {
     background-color: white;
     border-radius: 50%;
     width: 100px;
     height: 100px;
     float: left;
-    font-family: monospace;
     font-size: 16px;
+    text-align: center;
 }
 
-#name {
-    margin: 20px 10px 20px 30px;
+header  {
+    height: 280px;
+}
+
+header p {
     padding: 50px;
+    font-size: 2em;
 }
 
-#from {
+header p:first-child {
+    margin: 20px 10px 20px 0px;
+}
+
+header p:nth-child(2) {
     margin: 50px 20px 10px 30px;
-    padding: 50px;
 }
 
-#food {
+header p:nth-child(3) {
     margin: 30px 20px 10px 10px;
-    padding: 50px;
 }
 
-#song {
-    margin: 40px 20px 10px 20px;
-    padding: 50px;
+header p:nth-child(4) {
+    margin: 40px 0px 10px 20px;
+}
+
+main {
+    float: left;
+    margin-bottom: 100px;
+}
+
+#more-info {
+    padding: 40px 50px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+#more-info p {
+    line-height: 1.5em;
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+.lists {
+    overflow: auto;
+}
+
+li {
+    font-size: 14px;
+    line-height: 1.5em;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin-top: 0px;
+}
+
+#audiobooks {
+    width: fit-content;
+    margin-right: 40px;
+    float: left;
+}
+
+#top-colors {
+    float: left;
+}
+
+ul {
+    padding-left: 25px;
 }
