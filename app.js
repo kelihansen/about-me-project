@@ -7,10 +7,10 @@ let userStatus;
 alert('Hi there! My name is Keli, and I\'m an aspiring web developer. Want to know more about me?');
 
 const userName = prompt('First of all, what\'s your name?');
-alert('Hi, ' + userName + '! Thanks so much for visiting. So here\'s an idea: I\'ll ask some questions on the subject of me, and you can guess the answers. All you have to do is type "Yes" or "No" ("y" or "n" if you\'re efficient that way).');
+alert('Hi, ' + userName + '! Thanks so much for visiting. So here\'s an idea: I\'ll ask some questions on the subject of yours truly, and you can guess the answers. All you have to do is type "Yes" or "No" ("y" or "n" if you\'re efficient that way).');
 
 // total number of questions
-let howManyQuestions = 5;
+const howManyQuestions = 5;
 
 // yes or no score
 let score = 0;
@@ -101,3 +101,30 @@ if (score === howManyQuestions) {
     response = 'Clearly you have much more to learn about me!';
 }
 alert('You got ' + score + ' out of 5 questions right, ' + userName + '. ' + response);
+
+// number guessing
+const favNum = 17;
+let guessesLeft = 3;
+let guessesGrammar = 'guesses';
+let numGuess = prompt('Okay, ' + userName + ', how about this. Take a guess: What\'s my favorite number?');
+for (let i = 0; i < 3; i++) {
+    if (parseInt(numGuess) === favNum) {
+        break;
+    } else if (parseInt(numGuess) < favNum) {
+        numGuess = prompt('Too low, ' + userName + '. Try again! You have ' + guessesLeft + ' ' + guessesGrammar + ' left.');
+    } else if (parseInt(numGuess) > favNum) {
+        numGuess = prompt('Too high, ' + userName + '. Try again! You have ' + guessesLeft + ' ' + guessesGrammar + ' left.');
+    } else {
+        numGuess = prompt('That doesn\'t count as a number, ' + userName + '. You lose a guess.');
+    }
+    guessesLeft--;
+    if (guessesLeft === 1) {
+        guessesGrammar = 'guess';
+    }
+}
+
+if (parseInt(numGuess) === favNum) {
+    alert('You got it! Well done.');
+} else if (parseInt(numGuess) !== 17) {
+    alert('Sorry, ' + userName + ', you\'re out of guesses. My favorite number is 17.');
+}
