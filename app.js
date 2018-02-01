@@ -149,8 +149,6 @@ for (let i = 0; i < otherStates.length; i++) {
 guessesLeft = 5;
 // it hurt me to read "you have 1 guesses left," so this sets up a fix
 guessesGrammar = 'guesses';
-// I made a variable to act like a switch that gets flipped if they get the right answer
-let winner;
 // finally we have the initial prompt, which returns a lowercase version of the user's answer
 let stateGuess = prompt('I\'ve got one last game for you, ' + userName + '. Enter the name of a state other than Oregon. If I\'ve lived there, you win!').toLowerCase();
 // the initial prompt takes guess number one, so this loop gives 5 more
