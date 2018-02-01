@@ -115,7 +115,7 @@ for (let i = 0; i < 3; i++) {
     } else if (parseInt(numGuess) > favNum) {
         numGuess = prompt('Too high, ' + userName + '. Try again! You have ' + guessesLeft + ' ' + guessesGrammar + ' left.');
     } else {
-        numGuess = prompt('That doesn\'t count as a number, ' + userName + '. You lose a guess.');
+        numGuess = prompt('That doesn\'t count as a number, ' + userName + '. You have ' + guessesLeft + ' more ' + guessesGrammar + '.');
     }
     guessesLeft--;
     if (guessesLeft === 1) {
