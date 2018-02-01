@@ -7,7 +7,7 @@ let userStatus;
 alert('Hi there! My name is Keli, and I\'m an aspiring web developer. Want to know more about me?');
 
 const userName = prompt('First of all, what\'s your name?');
-alert('Hi, ' + userName + '! Thanks so much for visiting. So here\'s an idea: I\'ll ask some questions on the subject of yours truly, and you can guess the answers. All you have to do is type "Yes" or "No" ("y" or "n" if you\'re efficient that way).');
+alert('Hi, ' + userName + '! So here\'s an idea: I\'ll ask some questions on the subject of yours truly, and you can guess the answers. All you have to do is type "Yes" or "No" ("y" or "n" if you\'re efficient that way).');
 
 // total number of questions
 const howManyQuestions = 5;
@@ -184,7 +184,7 @@ stateFormatted.push(' and ' + otherStates[otherStates.length - 1]);
 
 // if the winner switch was flipped by a correct answer, the user gets congratulated and informed (if not, consoled and informed)
 if (winner) {
-    alert('It\'s true, ' + userName + '! Apart from Oregon, I\'ve lived in ' + stateFormatted + '. (Only the first 3 are true - the rest just test my code!)');
+    alert('It\'s true, ' + userName + '! Apart from Oregon, I\'ve lived in ' + stateFormatted + '. (Actually, only the first 3 are true - the rest just test my code!)');
 } else if (stateGuess !== 17) {
-    alert('Sorry, ' + userName + ', you\'re out of guesses. Apart from Oregon, I\'ve lived in ' + stateFormatted + '. (Only the first 3 are true - the rest just test my code!)');
+    alert('Sorry, ' + userName + ', you\'re out of guesses. Apart from Oregon, I\'ve lived in ' + stateFormatted + '. (Actually, only the first 3 are true - the rest just test my code!)');
 }
