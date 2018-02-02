@@ -5,3 +5,8 @@ Our first assignment in Alchemy Code Lab's Bootcamp 1. The purpose of the projec
 
 ## Getting Started
 Once you've got the .html, .css, and .js files on your machine, open them in your favorite browser and follow the prompts!
+
+## Authors 
+Navigator was Keli Hansen.
+Driver was William Tronvig. 
+First pair programming project with creating functions. 
