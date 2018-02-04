@@ -1,90 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: cadetblue;
-    font-family: monospace;
+    font-family: 'Cabin', sans-serif;
+    background-image: url(images/backstripes.gif);
 }
 
-#wrapper {
-    width: 910px;
-    margin: 0 auto;
-}
-
-header p {
-    background-color: white;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    float: left;
-    font-size: 16px;
-    text-align: center;
+h1, h2, h3 {
+    font-family: 'Lobster', cursive;
+    margin-bottom: 15px;
 }
 
 header  {
-    height: 280px;
+    height: 230px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div {
+    display: inline-block;
+    border-radius: 50%;
+    width: 164px;
+    height: 164px;
 }
 
 header p {
-    padding: 50px;
-    font-size: 2em;
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    transform: rotate(343deg);
+    margin-top: 54px;
 }
 
-header p:first-child {
-    margin: 20px 10px 20px 0px;
+header div:first-child {
+   background-color: rgba(183, 183, 28, .6);
+   position: relative;
+   left: 35px;
+   bottom: 10px;
 }
 
-header p:nth-child(2) {
-    margin: 50px 20px 10px 30px;
+header div:nth-child(2) {
+    background-color: rgba(5, 153, 153, .6);
+    position: relative;
+    left: 10px;
+    top: 10px;
 }
 
-header p:nth-child(3) {
-    margin: 30px 20px 10px 10px;
+header div:nth-child(3) {
+    background-color: rgba(43, 86, 163, .6);
+    position: relative;
+    right: 10px;
+    bottom: 5px;
 }
 
-header p:nth-child(4) {
-    margin: 40px 0px 10px 20px;
+header div:nth-child(4) {
+    background-color: rgba(157, 64, 160, .6);
+    position: relative;
+    right: 33px;
+    top: 5px;
 }
 
 main {
-    float: left;
-    margin-bottom: 100px;
+    margin: 0 auto;
+    width: 900px;
 }
 
-#more-info {
-    padding: 40px 50px;
-    margin: 0 auto;
+main>section {
+    display: inline-block;
+    width: 450px;
+    margin-top: 30px;
+    margin-right: 25px;
+    background-color: rgb(158, 158, 158);
+    padding: 30px 30px 0 30px;
+    vertical-align: top;
+    position: sticky;
+    top: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+main article {
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+#about-me {
     background-color: white;
 }
 
-#more-info p {
-    line-height: 1.5em;
-    margin-bottom: 40px;
-    font-size: 14px;
+h1 {
+    font-size: 24px;
 }
 
-.lists {
-    overflow: auto;
+#more-info p {
+    line-height: 18px;;
+    margin-bottom: 40px;
+    font-size: 14px;
+    padding: 30px;
+}
+
+h3 {
+    font-size: 18px;
 }
 
 li {
     font-size: 14px;
-    line-height: 1.5em;
-    padding: 0;
+    line-height: 18epx;
+    margin-bottom: 5px;
 }
 
-h1 {
-    font-size: 2em;
-    margin-top: 0px;
+ol li {
+    margin-left: 17px;
+    margin-bottom: 13px;
+    position: relative;
+}
+
+li figure {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 139px;
+}
+
+#dark-gray-chip {
+    background-color: rgb(51, 51, 51);
+}
+
+#med-gray-chip {
+    background-color: rgb(112, 112, 112);
+}
+#light-gray-chip {
+    background-color: rgb(216, 216, 216);
+}
+#green-chip {
+    background-color: rgb(183, 183, 28);
+}
+#blue-green-chip {
+    background-color: rgb(7, 153, 146);
+}
+#green-blue-chip {
+    background-color: rgb(7, 143, 153);
+}
+#cobalt-chip {
+    background-color: rgb(43, 86, 163);
+}
+#magenta-chip {
+    background-color: rgb(157, 64, 160);
+}
+#black-chip {
+    background-color: black;
+}
+#white-chip {
+    background-color: white;
+}
+
+
+span.author {
+    margin-left: 40px;
+    font-size: 12px;
+}
+
+#audiobooks, #top-colors {
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
 }
 
 #audiobooks {
-    width: fit-content;
-    margin-right: 40px;
-    float: left;
+    margin-right: 30px;
+    width: 170px;
+    height: 328px;
 }
 
 #top-colors {
-    float: left;
+    width: 126px;
+    height: 328px;
 }
 
 ul {
-    padding-left: 25px;
+    list-style: square inside;
+}
+
+aside {
+    display: inline-block;
+    width: 300px;
+    background-color: rgb(158, 158, 158);
+    padding: 30px 30px 0 30px;
+    margin: 30px 0;
+}
+
+aside h2 {
+    color: white;
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+aside img {
+    margin-bottom: 30px;
 }
