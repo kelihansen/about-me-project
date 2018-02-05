@@ -183,4 +183,5 @@ function statesQuestion(guessesLeft) {
     } else {
         alert('Sorry, ' + userName + ', you\'re out of guesses. Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
     }
+    alert('Please enjoy my page!');
 }
