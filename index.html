@@ -2,55 +2,64 @@
 <html>
 <head>
     <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Lobster" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="wrapper">
-        <header>
-            <p>A few</p>
-            <p>things</p>
-            <p>about</p>
-            <p>Keli!</p>
-        </header>
-        <main>
-            <section id="more-info">
-                <article>
-                    <h1>About Me</h1>
-                    <p>Hi! I'm Keli. I live in mossy Portland, Oregon with my husband / JavaScript mentor and our fluffy tabby. When I'm not coding, I can often be found taking long walks while listening to audiobooks, knitting while listening to audiobooks, weaving while listening to audiobooks, or cooking with herbs from my tiny garden while listening to audiobooks. Find my Khan Academy project about audiobooks <a href="https://www.khanacademy.org/computer-programming/spin-off-of-project-bookshelf/6143069194747904">here</a>.</p>
+    <header>
+        <div><p>A few</p></div>
+        <div><p>things</p></div>
+        <div><p>about</p></div>
+        <div><p>Keli!</p></div>
+    </header>
+    <main>
+        <section>
+            <article  id="about-me">
+                <h1>About Me</h1>
+                <p>I live in mossy Portland, Oregon with my husband and our fluffy tabby. When I'm not coding, I can often be found taking long walks while listening to audiobooks, knitting while listening to audiobooks, weaving while listening to audiobooks, or cooking with herbs from my tiny garden while listening to audiobooks. Find my Khan Academy project about audiobooks <a href="https://www.khanacademy.org/computer-programming/spin-off-of-project-bookshelf/6143069194747904" target="_blank">here</a>.</p>
+            </article>
+            <section class="lists">
+                <article id="audiobooks">
+                    <h3>Audiobooks I've Enjoyed</h2>
+                    <ul>
+                        <li><a href="https://multcolib.bibliocommons.com/item/show/3378635068" target="_blank"><cite>His Dark Materials</cite></a> (series)<br><span class="author">by Philip Pullman</span></li>
+                        <li><a href="https://multcolib.bibliocommons.com/item/show/3423704068" target="_blank"><cite>Ready Player One</cite></a><br><span class="author">by Ernest Cline</span></li>
+                        <li><a href="https://multcolib.bibliocommons.com/item/show/3418907068" target="_blank"><cite>Oryx &amp; Crake</cite></a> (series)<br><span class="author">by Margaret Atwood</span></li>
+                        <li><a href="https://multcolib.bibliocommons.com/item/show/3425036068" target="_blank"><cite>Room</cite></a><br><span class="author">by Emma Donoghue</span></li>
+                        <li><a href="https://multcolib.bibliocommons.com/item/show/2384616068" target="_blank"><cite>The Book Thief</cite></a><br><span class="author">by Markus Zuzak</span></li>
+                        <li><a href="https://multcolib.bibliocommons.com/item/show/3279891068" target="_blank"><cite>Born a Crime</cite></a><br><span class="author">by Trevor Noah</span></li>
+                        <li><a href="https://multcolib.bibliocommons.com/item/show/2155186068" target="_blank"><cite>Gone Girl</cite></a><br><span class="author">by Gillian Flynn</span></li>
+                    </ul>
                 </article>
-                <section class="lists">
-                    <article id="audiobooks">
-                        <h2>Recommended Audiobooks</h2>
-                        <ul>
-                            <li>The <cite>His Dark Materials</cite> series by Philip Pullman</li>
-                            <li><cite>Ready Player One</cite> by Ernest Cline</li>
-                            <li>The <cite>Oryx &amp; Crake</cite> series by Margaret Atwood</li>
-                            <li>The <cite>Wildwood</cite> series by Colin Meloy</li>
-                            <li><cite>Room</cite> by Emma Donoghue</li>
-                            <li><cite>The Book Thief</cite> by Markus Zuzak</li>
-                            <li><cite>Born a Crime</cite> by Trevor Noah</li>
-                            <li><cite>Gone Girl</cite> by Gillian Flynn</li>
-                        </ul>
-                    </article>
-                    <article id="top-colors">
-                        <h2>My Top 10 Favorite Colors</h2>
-                        <ol>
-                            <li>Dark gray</li>
-                            <li>Medium gray</li>
-                            <li>Light gray</li>
-                            <li>Vivid green</li>
-                            <li>Blue Green</li>
-                            <li>Green Blue</li>
-                            <li>Cobalt Blue</li>
-                            <li>Magenta</li>
-                            <li>Black</li>
-                            <li>White</li>
-                        </ol>
-                    </article>
-                </section>
+                <article id="top-colors">
+                    <h3>Top 10 Colors</h2>
+                    <ol>
+                        <li>Dark gray<figure id="dark-gray-chip"></figure></li>
+                        <li>Medium gray<figure id="med-gray-chip"></figure></li>
+                        <li>Light gray<figure id ="light-gray-chip"></figure></li>
+                        <li>Vivid green<figure id="green-chip"></figure></li>
+                        <li>Blue Green<figure id="blue-green-chip"></figure></li>
+                        <li>Green Blue<figure id="green-blue-chip"></figure></li>
+                        <li>Cobalt Blue<figure id="cobalt-chip"></figure></li>
+                        <li>Magenta<figure id="magenta-chip"></figure></li>
+                        <li>Black<figure id="black-chip"></figure></li>
+                        <li>White<figure id="white-chip"></figure></li>
+                    </ol>
+                </article>
             </section>
-        </main>
-    </div>
-    <script src="app.js"></script>
+        </section>
+        <aside>
+            <h2>I like making things, walking around outside, and taking pictures.</h2>
+            <img src="images/duskybeach.jpg" alt="photo of waves at dusk off the coast of Yachats, Oregon">
+            <img src="images/tapestrybunting.jpg" alt="photo of small tapestry weavings strung to be hung like bunting">
+            <img src="images/gorge.jpg" alt="photo of stream surrounded by mossy rocks and trees in the Colombia River Gorge">
+            <img src="images/shipwreck.jpg" alt="photo of Peter Iredale shipwreck near Astoria, Oregon during a stormy sunset">
+            <img src="images/xmasweaving.jpg" alt="photo of three handwoven projects: two placemats and a scarf">
+            <img src="images/snowtrees.jpg" alt="photo of branches covered in snow">
+            <img src="images/sunsetsand.jpg" alt="photo of sand reflecting a pink sunset">
+            <img src="images/brioche.jpg" alt="photo of a brioche knitting project in progress">
+        </aside>
+    </main>
+    <!-- <script src="app.js"></script> -->
 </body>
 </html>
