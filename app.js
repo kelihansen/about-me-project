@@ -1,24 +1,21 @@
 'use strict';
+
 let score = 0;
-const howManyQuestions = 5;
 let userStatus;
-let guessesLeft = 3;
 let guessesGrammar = 'guesses';
 
 const userName = getUserName();
+
 catQuestion();
 bikeQuestion();
 beachQuestion();
 gloriaQuestion();
 sweatersQuestion();
-reportScore();
-numberQuestion();
-statesQuestion();
-
+reportScore(5);
+numberQuestion(3);
+statesQuestion(5);
 
 // INTRO & NAME COLLECTION
-
-
 function getUserName() {
     alert('Hi there! My name is Keli, and I\'m an aspiring web developer. Want to know more about me?');
     const theirName = prompt('Oh good! First of all, what\'s your name?');
@@ -43,6 +40,7 @@ function catQuestion() {
     console.log('When asked if I hate cats, ' + userName + ' answered "' + hateCats + '."');
     console.log(userName + ' is ' + userStatus + '.');
 }
+
 function bikeQuestion() {
     let rideBike = prompt('How about this: Do I ride my bike to school?').toLowerCase();
     while (rideBike !== 'yes' && rideBike !== 'y' && rideBike !== 'no' && rideBike !== 'n') {
@@ -59,6 +57,7 @@ function bikeQuestion() {
     console.log('When asked if I ride my bike to school, ' + userName + ' answered "' + rideBike + '."');
     console.log(userName + ' is ' + userStatus + '.');
 }
+
 function beachQuestion() {
     let lovesPacific = prompt('All right, ' + userName + '. Do I think cold, rocky, Pacific beaches are some of the prettiest places on earth?').toLowerCase();
     while (lovesPacific !== 'yes' && lovesPacific !== 'y' && lovesPacific !== 'no' && lovesPacific !== 'n') {
@@ -75,6 +74,7 @@ function beachQuestion() {
     console.log('When asked if I think cold, rocky, Pacific beaches are some of the prettiest places on earth, ' + userName + ' answered "' + lovesPacific + '."');
     console.log(userName + ' is ' + userStatus + '.');
 }
+
 function gloriaQuestion() {
     let unmovedByGloria = prompt('What do you think: Can I sit still when I hear Gloria by Laura Branigan?').toLowerCase();
     while (unmovedByGloria !== 'yes' && unmovedByGloria !== 'y' && unmovedByGloria !== 'no' && unmovedByGloria !== 'n') {
@@ -91,6 +91,7 @@ function gloriaQuestion() {
     console.log('When asked if I can sit still when I hear Gloria by Laura Branigan, ' + userName + ' answered "' + unmovedByGloria + '."');
     console.log(userName + ' is ' + userStatus + '.');
 }
+
 function sweatersQuestion() {
     let loveSweaters = prompt('Okay, ' + userName + '. Last question. Are sweaters my favorite thing to knit?').toLowerCase();
     while (loveSweaters !== 'yes' && loveSweaters !== 'y' && loveSweaters !== 'no' && loveSweaters !== 'n') {
@@ -107,8 +108,9 @@ function sweatersQuestion() {
     console.log('When asked if sweaters are my favorite thing to knit, ' + userName + ' answered "' + loveSweaters + '."');
     console.log(userName + ' is ' + userStatus + '.');
 }
+
 // SCORE REPORT
-function reportScore() {
+function reportScore(howManyQuestions) {
     let response;
     if (score === howManyQuestions) {
         response = 'You really get me!';
@@ -120,13 +122,10 @@ function reportScore() {
     }
     alert('You got ' + score + ' out of 5 questions right, ' + userName + '. ' + response);
 }
+
 // NUMBER GUESSING
-
-
-function numberQuestion() {
+function numberQuestion(guessesLeft) {
     const favNum = 17;
-    // I set the initial value of how many guesses the user has left
-    // initial prompt
     let numGuess = prompt('Okay, ' + userName + ', how about this. Take a guess: What\'s my favorite number?');
     for (let i = 0; i < 3; i++) {
         if (parseInt(numGuess) === favNum) {
@@ -138,7 +137,6 @@ function numberQuestion() {
         } else {
             numGuess = prompt('That doesn\'t count as a number, ' + userName + '. You have ' + guessesLeft + ' more ' + guessesGrammar + '.');
         }
-        // the guess count decreases at the end of each loop cycle
         guessesLeft--;
         // this is just "guesses" becoming "guess" if 1 is left
         if (guessesLeft === 1) {
@@ -152,53 +150,38 @@ function numberQuestion() {
         alert('Sorry, ' + userName + ', you\'re out of guesses. My favorite number is 17.');
     }
 }
+
 // STATE GUESSING
-function statesQuestion() {
-// so first is my array of states
+function statesQuestion(guessesLeft) {
     const otherStates = ['California', 'Pennsylvania', 'New York'];
-    // to make them lowercase, I looped through them and "toLowerCased" each string, leaving the results in a new array
     const simpleStates = [];
     for (let i = 0; i < otherStates.length; i++) {
         simpleStates.push(otherStates[i].toLowerCase());
     }
-    // I set the initial value of how many guesses the user has left
-    guessesLeft = 5;
-    // it hurt me to read "you have 1 guesses left," so this sets up a fix
     guessesGrammar = 'guesses';
-    // finally we have the initial prompt, which returns a lowercase version of the user's answer
     let stateGuess = prompt('I\'ve got one last game for you, ' + userName + '. Enter the name of a state other than Oregon. If I\'ve lived there, you win!').toLowerCase();
     // the initial prompt takes guess number one, so this loop gives 5 more
     for (let i = 0; i < 5; i++) {
-        // the "includes" method checks if the user's answer matches any of the (lowercase) answers
         if (simpleStates.includes(stateGuess)) {
-            // alert('You did it, ' + userName + '! Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
             break;
-        // if so, we exit the loop, if not, the user is prompted again, with an updated guess count
         } else {
             stateGuess = prompt('Not a match, ' + userName + '. You have ' + guessesLeft + ' ' + guessesGrammar + ' left.').toLowerCase();
         }
-        // the guess count decreases at the end of each loop cycle
         guessesLeft--;
-        // this is just "guesses" becoming "guess" if 1 is left
         if (guessesLeft === 1) {
             guessesGrammar = 'guess';
         }
     }
-    // I'm pretty sure there's a better way to do this, but a list of elements separated by nothing by commas (no spaces) makes me cringe
     const stateFormatted = [];
-    // after starting with an empty array (which I learned can be a const, because even though it changes, it isn't reassigned) my first state gets added
     stateFormatted.push(otherStates[0]);
-    // then you cycle through the rest of the array and add spaces, stopping before the last element (much cooler if you add more states to the original array)
     for (let i = 1; i < (otherStates.length - 1); i++) {
         stateFormatted.push(' ' + otherStates[i]);
     }
-    // then you add the final element of the array, preceded by "and"
     stateFormatted.push(' and ' + otherStates[otherStates.length - 1]);
-
-    // if user won with last guess, the user gets congratulated and informed (if not, consoled and informed)
     if (simpleStates.includes(stateGuess)) {
         alert('You did it, ' + userName + '! Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
     } else {
         alert('Sorry, ' + userName + ', you\'re out of guesses. Apart from Oregon, I\'ve lived in ' + stateFormatted + '.');
     }
+    alert('Please enjoy my page!');
 }
