@@ -134,6 +134,7 @@ li figure {
     position: absolute;
     top: 2px;
     left: 130px;
+    box-sizing: border-box;
 }
 
 #dark-gray-chip {
